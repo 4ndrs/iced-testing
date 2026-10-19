@@ -44,7 +44,7 @@ impl Counter {
                 .padding(10)
                 .style(container::bordered_box),
                 pick_list(Theme::ALL, self.theme.clone(), Message::ThemeChanged)
-                    .placeholder("chose a theme...")
+                    .placeholder("choose a theme...")
             ]
             .align_x(iced::Alignment::Center)
             .spacing(20),
