@@ -61,7 +61,19 @@ impl Counter {
 fn main() -> iced::Result {
     iced::application(Counter::default, Counter::update, Counter::view)
         .title("IcedTesting")
+        .decorations(false)
+        .resizable(false)
+        .window_size(iced::Size {
+            width: 700.0,
+            height: 500.0,
+        })
+        .level(iced::window::Level::AlwaysOnTop)
         .theme(Counter::theme)
+        .transparent(true)
+        .style(|_, theme| iced::theme::Style {
+            background_color: iced::Color::TRANSPARENT,
+            text_color: theme.palette().text,
+        })
         .run()
 }
 
